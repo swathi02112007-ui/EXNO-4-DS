@@ -323,3 +323,4 @@ Ridge Coefficients: {'PassengerId': -2e-05, 'Fare': 0.0211, 'Pclass': -0.06123, 
 Chi2 Top Features: ['Fare', 'Age', 'Pclass']
 
 ✅ Feature Scaling and Selection Completed Successfully!
+![alt text](<Screenshot 2025-10-08 193949.png>)
