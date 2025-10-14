@@ -6,11 +6,11 @@ EXNO:4 - FEATURE SCALING AND FEATURE SELECTION
 # ==========================================
 # 📦 IMPORT LIBRARIES
 # ==========================================
-import pandas as pd
-import numpy as np
-from scipy import stats
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
+import numpy as np # pyright: ignore[reportMissingImports]
+from scipy import stats # pyright: ignore[reportMissingImports]
+import matplotlib.pyplot as plt # pyright: ignore[reportMissingModuleSource]
+import seaborn as sns # pyright: ignore[reportMissingModuleSource]
 
 # ==========================================
 # 🔹 FEATURE SCALING
@@ -32,7 +32,7 @@ print("Maximum Weight:", df['Weight'].max())
 # ------------------------------
 # 1️⃣ Min-Max Scaler
 # ------------------------------
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler # pyright: ignore[reportMissingModuleSource]
 minmax = MinMaxScaler()
 df_minmax = df.copy()
 df_minmax[['Height', 'Weight']] = minmax.fit_transform(df[['Height', 'Weight']])
@@ -42,7 +42,7 @@ print(df_minmax.head())
 # ------------------------------
 # 2️⃣ Standard Scaler
 # ------------------------------
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler # pyright: ignore[reportMissingModuleSource]
 std = StandardScaler()
 df_std = df.copy()
 df_std[['Height', 'Weight']] = std.fit_transform(df[['Height', 'Weight']])
@@ -52,7 +52,7 @@ print(df_std.head())
 # ------------------------------
 # 3️⃣ Normalizer
 # ------------------------------
-from sklearn.preprocessing import Normalizer
+from sklearn.preprocessing import Normalizer # pyright: ignore[reportMissingModuleSource]
 norm = Normalizer()
 df_norm = df.copy()
 df_norm[['Height', 'Weight']] = norm.fit_transform(df[['Height', 'Weight']])
@@ -62,7 +62,7 @@ print(df_norm.head())
 # ------------------------------
 # 4️⃣ MaxAbs Scaler
 # ------------------------------
-from sklearn.preprocessing import MaxAbsScaler
+from sklearn.preprocessing import MaxAbsScaler # pyright: ignore[reportMissingModuleSource]
 maxabs = MaxAbsScaler()
 df_maxabs = df.copy()
 df_maxabs[['Height', 'Weight']] = maxabs.fit_transform(df[['Height', 'Weight']])
@@ -72,7 +72,7 @@ print(df_maxabs.head())
 # ------------------------------
 # 5️⃣ Robust Scaler
 # ------------------------------
-from sklearn.preprocessing import RobustScaler
+from sklearn.preprocessing import RobustScaler # pyright: ignore[reportMissingModuleSource]
 rob = RobustScaler()
 df_rob = df.copy()
 df_rob[['Height', 'Weight']] = rob.fit_transform(df[['Height', 'Weight']])
@@ -84,10 +84,10 @@ print(df_rob.head())
 # ==========================================
 print("\n==================== FEATURE SELECTION ====================\n")
 
-import statsmodels.api as sm
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression, RidgeCV, LassoCV, Ridge, Lasso
-from sklearn.feature_selection import RFE, SelectKBest, mutual_info_classif, mutual_info_regression, chi2
+import statsmodels.api as sm # pyright: ignore[reportMissingImports]
+from sklearn.model_selection import train_test_split # pyright: ignore[reportMissingModuleSource]
+from sklearn.linear_model import LinearRegression, RidgeCV, LassoCV, Ridge, Lasso # pyright: ignore[reportMissingModuleSource]
+from sklearn.feature_selection import RFE, SelectKBest, mutual_info_classif, mutual_info_regression, chi2 # pyright: ignore[reportMissingModuleSource]
 
 # Load Titanic dataset
 df = pd.read_csv('/content/titanic_dataset.csv')
